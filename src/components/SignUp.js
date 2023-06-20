@@ -20,7 +20,7 @@ function SignUp() {
 
   useEffect(
     () => {
-      setErrors(validate(data));
+      setErrors(validate(data, "signUp"));
       console.log(errors);
     },
     [data],
@@ -148,7 +148,7 @@ function SignUp() {
           )}
         </div>
         <div className={styles.formButtons}>
-          <Link href={"/"}>login</Link>
+          <Link href={"/signIn"}>Login</Link>
           <button type="submit">Sign Up</button>
         </div>
       </form>
